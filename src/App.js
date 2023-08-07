@@ -10,16 +10,16 @@ import { Routes, Route,Link } from 'react-router-dom';
 function App() {
   return (
     <>
-     <nav>
+     {/* <nav>
         <Link to={"/"}>Home</Link> 
         <Link to={"/new"}>New</Link> 
         <Link to={"/diary2"}>Diary</Link> 
         <Link to={"/edit"}>Edit</Link> 
-      </nav>
+      </nav> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/new" element={<New />} />
-        <Route path="/diary2" element={<Diary2 />} />
+        <Route path="/diary2/:id" element={<Diary2 />} />
         <Route path="/edit" element={<Edit />} />
       </Routes>
       
