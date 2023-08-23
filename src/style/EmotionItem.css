@@ -1,0 +1,73 @@
+.Editor {
+}
+.Editor .editor_section {
+  margin-bottom: 40px;
+}
+.Editor h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.Editor input,
+textarea {
+  border: none;
+  border-radius: 5px;
+  background: #ececec;
+  padding: 20px;
+  font-size: 20px;
+  font-family: 'Nanum Pen Script';
+}
+.Editor input {
+  padding: 10px 0;
+  cursor: pointer;
+}
+.Editor textarea {
+  width: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.Editor .bottom_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.EmotionItem {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.EmotionItem img {
+  width: 50%;
+  margin-bottom: 10px;
+}
+.EmotionItem span {
+  font-size: 18px;
+}
+/* 활성화 디자인 */
+.EmotionItem_off {
+  background: #ececec;
+}
+.EmotionItem_on_1 {
+  background: #64c964;
+  color: #fff;
+}
+.EmotionItem_on_2 {
+  background: #9dd772;
+  color: #fff;
+}
+.EmotionItem_on_3 {
+  background: #fdce17;
+  color: #fff;
+}
+.EmotionItem_on_4 {
+  background: #fd8446;
+  color: #fff;
+}
+.EmotionItem_on_5 {
+  background: #fd565f;
+  color: #fff;
+}
