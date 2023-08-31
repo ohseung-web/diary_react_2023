@@ -1,11 +1,11 @@
 import Button from './Button';
 import '../style/Editor.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { emotionList, getFormattedDate } from '../util';
 import { useNavigate } from 'react-router-dom';
 import EmotionItem from './EmotionItem';
 
-const Editor = ({ initDta, onSubmit }) => {
+const Editor = ({ initData, onSubmit }) => {
   // 취소하기(뒤로)
   const navigate = useNavigate(); //특정경로 이동('./paht')
   const handleOnGoBack = () => {
@@ -41,6 +41,15 @@ const Editor = ({ initDta, onSubmit }) => {
       emotionId,
     });
   };
+  //기본값 (일기내용) 설정
+  useEffect(() => {
+    if (initData) {
+      setState({
+        ...initData,
+        date: getFormattedDate(new Date(parseInt(initData.date))),
+      });
+    }
+  }, [initData]);
   return (
     <div className="Editor">
       <div className="editor_section">

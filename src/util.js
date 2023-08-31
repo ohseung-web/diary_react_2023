@@ -1,9 +1,9 @@
 // 이미지 import.js
-import emotion1 from './img/emoji_frowning.png';
-import emotion2 from './img/emoji_neutral.png';
-import emotion3 from './img/emoji_pouting.png';
-import emotion4 from './img/emoji_slightly.png';
-import emotion5 from './img/emoji_smiling.png';
+import emotion1 from './img/emoji_smiling.png';
+import emotion2 from './img/emoji_slightly.png';
+import emotion3 from './img/emoji_neutral.png';
+import emotion4 from './img/emoji_frowning.png';
+import emotion5 from './img/emoji_pouting.png';
 
 export const getEmotionImgById = (emotionId) => {
   const targetEmotionId = String(emotionId);
@@ -76,5 +76,23 @@ export const emotionList = [
     img: getEmotionImgById(5),
   },
 ];
+
+//일기 state 변경 시 일기 필터링
+export const getMonthRangeByDate = (date) => {
+  const beginTimeStamp = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    1
+  ).getTime();
+  const endTimeStamp = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    0,
+    23,
+    59,
+    59
+  ).getTime();
+  return { beginTimeStamp, endTimeStamp };
+};
 
 export default Util;
